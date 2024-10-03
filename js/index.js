@@ -163,3 +163,17 @@ preloadImages('.content__img-inner').then(() => {
   document.body.classList.remove('loading');
   init();
 });
+
+const videoSuffixes = [0, 1, 2, 3, 4, 5];
+			
+			// Generate a random index
+			const randomIndex = Math.floor(Math.random() * videoSuffixes.length);
+			
+			// Construct the video source URL
+			const videoSrc = `media/bg-video${videoSuffixes[randomIndex]}.mp4`;
+			
+			// Set the source to the video element
+			document.getElementById('videoSource').src = videoSrc;
+	
+			// Load the video
+			document.getElementById('backgroundVideo').load();
